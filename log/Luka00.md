@@ -10,13 +10,7 @@ When I was learning React, I made a reverse polish notation calculator (RPN). Yo
 - Grown-up CSS: There's nothing wrong with Bootstrap. The original project used Bootstrap. Since working on that project I have learned CSS Grid and how to really style webpages. I want to do that for the purpose of practice, creating a more unique design, and shrinking the footprint of the site.  
 - Learning!: I want to learn more about Rust, Vue, TypeScript, CSS, and WASM. That is the main driver.
 
-As for these logs, the goal is to show how projects like this progress. It's not linear and I will make mistakes. I hope I can help others learn by making interesting mistakes.
-
-## Design
-
-I created a Figma project [here](https://www.figma.com/file/rhgSHZhr0glvEwKqDv99rp/Luka?node-id=0%3A1). You should be able to comment on that. Let me know if you can't.  
-
-## Deployment
+As for these logs, the goal is to show how projects like this progress. It's not linear and I will make mistakes. I hope I can help others learn by making interesting mistakes. 
 
 I want to start off by just having an endpoint for deployment. I'm going with Azure to be on brand. I know how to deploy a Vue app to Azure -- it's a static website. I don't know if that changes with the added WASM. That is one of the questions this project will answer.  
 
@@ -42,4 +36,14 @@ Great!
 
 ![The default web app created when vue create app is run. Text in the header reads "Welcome to Your Vue.js + TypeScript App".](./images/ImageOfDefaultGeneratedVueAppWithTypeScript.png)
 
+Now that I look at it. I feel silly that there is a `src` directory within my `src` directory. Maybe I shouldn't I don't know. Things will probably move around before we're done.
 
+## Azure Bound
+
+I work on Azure. That's where I'm going to put this site. I'm just going to follow [this tutorial](https://passos.com.au/deploying-vue-js-to-azure-static-websites/) to set it up.
+
+Instead of using Azure DevOps, I am using GitHub Actions. The YAML I wrote was a combination of the tutorial and using the [Azure/actions](https://github.com/Azure/actions) repo.
+
+## Design
+
+I created a Figma project [here](https://www.figma.com/file/rhgSHZhr0glvEwKqDv99rp/Luka?node-id=0%3A1). You should be able to comment on that. Let me know if you can't.  
