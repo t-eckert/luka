@@ -12,6 +12,10 @@ I am designing the UI in Figma. You can follow along and comment [here](https://
 
 ## Deployment
 
+The application is compiled into a static website that is pushed to blob storage in Azure and served from there to [https://lukarpn.z14.web.core.windows.net](https://lukarpn.z14.web.core.windows.net).
+
+The YAML that does this in the `azure-pipelines.yml` file.
+
 ## Development Environment
 
 I am working in VS Code and vim depending on how I feel like writing. I like vim for long sessions in a single file, though I know there are good solutions for easy file switching. When I am going to be navigating around between different files, I like to use VS Code.  
