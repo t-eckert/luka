@@ -1,4 +1,4 @@
-# Luka 00 - Design and Intent
+# Luka 00 - Intent and Getting It Out There
 
 Date: 7 September 2019
 
@@ -40,10 +40,101 @@ Now that I look at it. I feel silly that there is a `src` directory within my `s
 
 ## Azure Bound
 
-I work on Azure. That's where I'm going to put this site. I'm just going to follow [this tutorial](https://passos.com.au/deploying-vue-js-to-azure-static-websites/) to set it up.
+I work on Azure. That's where I'm going to put this site. I'm just going to follow [this tutorial](https://passos.com.au/deploying-vue-js-to-azure-static-websites/) to set it up. One difference between my implementation and his will be that I will be using the newer version of Azure Pipelines that uses YAML for config.  
 
-Instead of using Azure DevOps, I am using GitHub Actions. The YAML I wrote was a combination of the tutorial and using the [Azure/actions](https://github.com/Azure/actions) repo.
+No matter how many times I do it, the first half-dozen builds/deploys I run are broken. I feel bad for those poor deployment agents. Spun up just to install Node dependencies and then fail. Sorry.
+
+Once I cleared up some early errors, I bumped up against this one:  
+
+``` powershell
+[2019/09/08 05:45:30][ERROR] Error parsing source location "d:\a\1\s\src\dist": Failed to enumerate directory d:\a\1\s\src\dist\ with file pattern *. The system cannot find the path specified. (Exception from HRESULT: 0x80070003) For more details, please type "AzCopy /?:Source" or use verbose option /V.
+```
+
+My YAML for the deploy action was:
+
+``` yaml
+- task: AzureFileCopy@3
+  inputs:
+    SourcePath: 'src/dist'
+    azureSubscription: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    Destination: 'AzureBlob'
+    storage: 'lukarpn'
+    ContainerName: '$web'
+```
+
+I first thought the problem was arising because I wasn't using the local path. I was referencing a path that didn't exist. I found this by searching "Azure File Copy" and reading the [docs](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-file-copy?view=azure-devops) to this point on the `source`. I found I need to use the variable `$(Build.Repository.LocalPath)` to correctly locate the files to copy.
+
+Ok, so now I tried
+
+``` yaml
+- task: AzureFileCopy@3
+  inputs:
+    SourcePath: '$(Build.Repository.LocalPath)/src/dist'
+    azureSubscription: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    Destination: 'AzureBlob'
+    storage: 'lukarpn'
+    ContainerName: '$web'
+```
+
+That didn't fix it. In a comment on the tutorial post I found someone else having the same problem. If you:
+
+1. Use the suggested "Deploy Vue App" default pipeline.
+2. Then try to use Azure File Copy.
+3. You will get an error that Azure File Copy will only work with a Windows build agent.
+4. Then you will change the build agent from the default Ubuntu to Windows.
+5. Except this will create a bug because of how stacked scripts are run in PowerShell (I think...).
+6. The solution is to split the default "npm install and build" task into two:
+
+Original:
+
+``` yaml
+- script: |
+    cd src
+    npm install
+    npm run build
+  displayName: 'npm install and build'
+```
+
+Fixed:
+
+``` yaml
+- script: |
+    cd src
+    npm install
+  displayName: 'npm install'
+
+- script: |
+    cd src
+    npm run build
+  displayName: 'npm build'
+```
+
+That worked!
+
+![A gif of Anakin Skywalker from Star Wars Ep 1. When his podracer starts working, he exclaims "It's working! It's working!"](https://media.giphy.com/media/9K2nFglCAQClO/giphy.gif)
+
+## Mini-Pipeline-Retrospective
+
+What I should have done is created a new in the repo called "add-pipeline" and done all this troubleshooting there, then merged the working pipeline into "master". I didn't. I have learned for next project. At least there's no one else on this project I can annoy with this bad git hygiene.  
+
+Looking at the series of pipeline failures that led to this success, I feel this experiment has increase the entropy of the Universe already too much:
+
+![The results of 14 builds are shown. The first 13 are failures. Timestamps reveal that the process took a good 40 minutes.](./images/RepeatedFailure.png)
+
+But at least I can now see that the files are uploaded to Azure:
+
+![A directory of files matching those in this project is shown successfully deployed to Azure](./images/FilesUploadedToAzure.png)
+
+Further evidence of success is found by visiting the public endpoint for the blob: [https://lukarpn.z14.web.core.windows.net/](https://lukarpn.z14.web.core.windows.net/). The site is live!
+
+![The same default Vue app shown before is now being served in a browser from Azure](./images/SiteIsLive.png)
 
 ## Design
 
 I created a Figma project [here](https://www.figma.com/file/rhgSHZhr0glvEwKqDv99rp/Luka?node-id=0%3A1). You should be able to comment on that. Let me know if you can't.  
+
+
+## Wrap Up
+
+Starting Commit: [7150dfb09421aff8a2f9312070d7415ac94d2aaf](https://github.com/t-eckert/luka/tree/7150dfb09421aff8a2f9312070d7415ac94d2aaf)  
+Ending Commit: []()
