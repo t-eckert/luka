@@ -134,4 +134,4 @@ Further evidence of success is found by visiting the public endpoint for the blo
 This is a fine starting point for the project. The next step is to develop a simple design, implement it in Vue, and create the backing Rust to support it.
 
 Starting Commit: [7150dfb09421aff8a2f9312070d7415ac94d2aaf](https://github.com/t-eckert/luka/tree/7150dfb09421aff8a2f9312070d7415ac94d2aaf)  
-Ending Commit: []()
+Ending Commit: [f7a706313f158a301f71d29c5a0ccf1c6b7ec8bc](https://github.com/t-eckert/luka/tree/f7a706313f158a301f71d29c5a0ccf1c6b7ec8bc)
