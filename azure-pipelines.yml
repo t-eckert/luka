@@ -15,11 +15,14 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    cd src
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+- script: cd src
+  displayName: 'change to src directory'
+
+- script: npm install
+  displayName: 'npm install'
+
+- script: npm run build
+  displayName: 'npm build'
 
 - task: AzureFileCopy@3
   inputs:
