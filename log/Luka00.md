@@ -1,4 +1,8 @@
-# Luka 00 - Intent and Getting It Out There
+# Luka 00 - Intent and Deployment
+
+![Cover Image: Text reads Luka 00 - Intent and Deployment. Background shows two failed builds leading up to a third successful build.](./images/00CoverImage.png)
+
+> This post is part of a series on the development of a reverse polish notation calculator web-app using Rust/Wasm, Vue, and TypeScript.
 
 Date: 7 September 2019
 
@@ -36,7 +40,7 @@ Great!
 
 ![The default web app created when vue create app is run. Text in the header reads "Welcome to Your Vue.js + TypeScript App".](./images/ImageOfDefaultGeneratedVueAppWithTypeScript.png)
 
-Now that I look at it. I feel silly that there is a `src` directory within my `src` directory. Maybe I shouldn't I don't know. Things will probably move around before we're done.
+Now that I look at it. I feel silly that there is a `src` directory within my `src` directory. Maybe I shouldn't. I don't know. Things will probably move around before we're done.
 
 ## Azure Bound
 
@@ -117,7 +121,7 @@ That worked!
 
 What I should have done is created a new in the repo called "add-pipeline" and done all this troubleshooting there, then merged the working pipeline into "master". I didn't. I have learned for next project. At least there's no one else on this project I can annoy with this bad git hygiene.  
 
-Looking at the series of pipeline failures that led to this success, I feel this experiment has increase the entropy of the Universe already too much:
+Looking at the series of pipeline failures that led to this success, I feel this experiment has increased the entropy of the Universe already too much:
 
 ![The results of 14 builds are shown. The first 13 are failures. Timestamps reveal that the process took a good 40 minutes.](./images/RepeatedFailure.png)
 
