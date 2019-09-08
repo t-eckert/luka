@@ -27,4 +27,4 @@ steps:
     azureSubscription: 'Pay-As-You-Go(b5b76406-b750-4145-8a91-8dcd957fac1b)'
     Destination: 'AzureBlob'
     storage: 'lukarpn'
-    ContainerName: 'lukasite'
+    ContainerName: '$web'
