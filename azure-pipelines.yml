@@ -20,7 +20,9 @@ steps:
     npm install
   displayName: 'npm install'
 
-- script: npm run build
+- script: |
+    cd src
+    npm run build
   displayName: 'npm build'
 
 - task: AzureFileCopy@3
