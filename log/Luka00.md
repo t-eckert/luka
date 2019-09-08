@@ -20,4 +20,26 @@ I created a Figma project [here](https://www.figma.com/file/rhgSHZhr0glvEwKqDv99
 
 I want to start off by just having an endpoint for deployment. I'm going with Azure to be on brand. I know how to deploy a Vue app to Azure -- it's a static website. I don't know if that changes with the added WASM. That is one of the questions this project will answer.  
 
-Before deployment, I will need at least something to deploy.
+Before deployment, I will need at least something to deploy. Let's make a Vue app!
+
+## Making a Vue App
+
+I want to keep all the code together nicely, but that always shifts around in the early stages of a project. I am debating having a directory called `src` at the root or calling it `luka`. I'm not sure which is clearer. Is the project the whole of the repository, including the log, etc, or is it just what is in the directory.  
+
+For now, I'll just call it `src`.  
+
+In the newly created `src` directory, run `vue create .` (I'll admit I had to Google it). I created this project with Babel, TS, PWA, CSS Pre-processors, and the Linter.  
+
+I have found TypeScript to save me so many times. I really enjoy using Vue and TS together.  
+
+PWA support is great if people ever one day want to put this on their phones. Who knows.  
+
+I am going to try and use class style syntax for this project. As for a CSS pre-processor, I'm using SCSS. If you are unfamiliar with SCSS, it compiles into CSS, but allows for a larger feature-set and can reduce the amount of styling you have to write manually. [Here](https://dzone.com/articles/introduction-of-scss) is a pretty good intro to SCSS.  
+
+Once the app is generated, I can open it up in a browser with `npm run serve`.  
+
+Great!
+
+![The default web app created when vue create app is run. Text in the header reads "Welcome to Your Vue.js + TypeScript App".](./images/ImageOfDefaultGeneratedVueAppWithTypeScript.png)
+
+
