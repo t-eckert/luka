@@ -15,10 +15,9 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: cd src
-  displayName: 'change to src directory'
-
-- script: npm install
+- script: |
+    cd src
+    npm install
   displayName: 'npm install'
 
 - script: npm run build
