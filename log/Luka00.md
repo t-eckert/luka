@@ -129,12 +129,9 @@ Further evidence of success is found by visiting the public endpoint for the blo
 
 ![The same default Vue app shown before is now being served in a browser from Azure](./images/SiteIsLive.png)
 
-## Design
-
-I created a Figma project [here](https://www.figma.com/file/rhgSHZhr0glvEwKqDv99rp/Luka?node-id=0%3A1). You should be able to comment on that. Let me know if you can't.  
-
-
 ## Wrap Up
+
+This is a fine starting point for the project. The next step is to develop a simple design, implement it in Vue, and create the backing Rust to support it.
 
 Starting Commit: [7150dfb09421aff8a2f9312070d7415ac94d2aaf](https://github.com/t-eckert/luka/tree/7150dfb09421aff8a2f9312070d7415ac94d2aaf)  
 Ending Commit: []()
