@@ -23,7 +23,7 @@ steps:
 
 - task: AzureFileCopy@3
   inputs:
-    SourcePath: 'src/dist'
+    SourcePath: '$(Build.Repository.LocalPath)/src/dist'
     azureSubscription: 'Pay-As-You-Go(b5b76406-b750-4145-8a91-8dcd957fac1b)'
     Destination: 'AzureBlob'
     storage: 'lukarpn'
