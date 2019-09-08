@@ -1,5 +1,7 @@
 # Luka
 
+[![Build Status](https://dev.azure.com/teckert0973/res/_apis/build/status/t-eckert.luka?branchName=master)](https://dev.azure.com/teckert0973/res/_build/latest?definitionId=3&branchName=master)
+
 ## Backstory
 
 I have been fascinated by reverse polish notation (RPN) calculators since college. Last year, I created an [RPN calculator web-app](http://rpn.herokuapp.com/) in React while I was learning the framework. It's not great. This is a new project with the same goals from scratch to push my learning of Rust, WASM, and Vue. I don't know if it will be successful, but my goal is to be radically transparent. I am going to log the whole project to share my progress.  
