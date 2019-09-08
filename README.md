@@ -6,4 +6,6 @@ I have been fascinated by reverse polish notation (RPN) calculators since colleg
 
 ## Design
 
-<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FrhgSHZhr0glvEwKqDv99rp%2FLuka%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+I am designing the UI in Figma. You can follow along and comment [here](https://www.figma.com/file/rhgSHZhr0glvEwKqDv99rp/Luka?node-id=0%3A1).
+
+## Deployment

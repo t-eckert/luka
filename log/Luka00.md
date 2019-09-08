@@ -11,3 +11,13 @@ When I was learning React, I made a reverse polish notation calculator (RPN). Yo
 - Learning!: I want to learn more about Rust, Vue, TypeScript, CSS, and WASM. That is the main driver.
 
 As for these logs, the goal is to show how projects like this progress. It's not linear and I will make mistakes. I hope I can help others learn by making interesting mistakes.
+
+## Design
+
+I created a Figma project [here](https://www.figma.com/file/rhgSHZhr0glvEwKqDv99rp/Luka?node-id=0%3A1). You should be able to comment on that. Let me know if you can't.  
+
+## Deployment
+
+I want to start off by just having an endpoint for deployment. I'm going with Azure to be on brand. I know how to deploy a Vue app to Azure -- it's a static website. I don't know if that changes with the added WASM. That is one of the questions this project will answer.  
+
+Before deployment, I will need at least something to deploy.
