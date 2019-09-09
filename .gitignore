@@ -20,3 +20,9 @@ Sessionx.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# Rust #########################################################################
+**/target/*
+**/Cargo.lock
+**/*.rs.bk
+
