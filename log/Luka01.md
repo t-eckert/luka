@@ -46,11 +46,11 @@ With that in mind, I am actually going to call this `State` and have it contain 
 
 ``` rust
 /// # State
-/// 
+///
 /// Contains every value on the reverse polish notation calculator stack.
-struct State {
+pub struct State {
     /// State handling for the "stack" uses a Vec that is treated as a stack.
-    stack: Vec<f64>,
+    pub stack: Vec<f64>,
 }
 ```
 
@@ -110,7 +110,8 @@ impl State {
 
     ...
 
-    /// Pushes `value` to `State.stack` then creates a new instance of `State` using the appended to `stack`
+    /// Pushes `value` to `State.stack` then creates a new instance of `State`
+    /// using the appended to `stack`
     pub fn push(mut self, value: f64) -> State {
         self.stack.push(value);
         State { stack: self.stack }
@@ -132,15 +133,15 @@ mod tests {
     #[test]
     fn it_pushes() {
         // Given
-        let expected_stack = vec![0.0, 0.0, 0.0, 0.0, 3.14159];
+        let expected_stack = vec![3.14159];
         let pushed_value = 3.14159;
 
         // When
-        let state_initial = State::new();
-        let state_final = state_initial.push(pushed_value);
+        let state = State { stack: vec![] };
+        let state_prime = state.push(pushed_value);
 
         // Then
-        assert_eq!(expected_stack, state_final.stack);
+        assert_eq!(expected_stack, state_prime.stack);
     }
 }
 ```
@@ -159,7 +160,8 @@ impl State {
     ...
 
     /// Perform the operation passed as string on the last two values in the `stack`.  
-    /// Expects a string matching one of the following: `+`, `-`, `*`, `/`. If a string is passed that doesn't match, the function will return the `State` unchanged.
+    /// Expects a string matching one of the following: `+`, `-`, `*`, `/`.
+    /// If a string is passed that doesn't match, the function will return the `State` unchanged.
     ///
     /// ``` rust
     /// use calculator::State;
@@ -223,4 +225,5 @@ mod tests {
 
 Now, with those functions added, I feel comfortable merging this branch back into `dev`, then back to `master`. It won't change anything apparent on the front end, but the new Rust code will be up there floating in blob storage.
 
-Starting Commit: []
+Starting Commit: [70feecdd8f9a4c645e5847da8382dcd58947344e](https://github.com/t-eckert/luka/tree/70feecdd8f9a4c645e5847da8382dcd58947344e)  
+Ending Commit: [f37109bf4b7b3d22ef0b54785f9104f453d3c8c4](https://github.com/t-eckert/luka/tree/f37109bf4b7b3d22ef0b54785f9104f453d3c8c4)
