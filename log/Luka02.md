@@ -1,4 +1,6 @@
-# Luka 02
+# Luka 02 - Et Teal
+
+![Cover Image: Text reads Luka 02 - Et Teal. Background shows a calculator displaying 3.14.](./images/02CoverImage.png)
 
 Date: 9 September 2019
 
@@ -64,4 +66,6 @@ And now the button is teal. When hovered, it will turn a darker shade of teal ov
 
 I wanted to do more today, but for now I have a teal button deployed. Go to [https://lukarpn.z14.web.core.windows.net](https://lukarpn.z14.web.core.windows.net) if you want to enjoy clicking on it.
 
-Starting Commit: 
+Starting Commit: [f37109bf4b7b3d22ef0b54785f9104f453d3c8c4](https://github.com/t-eckert/luka/tree/f37109bf4b7b3d22ef0b54785f9104f453d3c8c4)
+
+Ending Commit: [d712b197986e3279dc76c22baeb31fbeabad0b4c](https://github.com/t-eckert/luka/tree/d712b197986e3279dc76c22baeb31fbeabad0b4c)
