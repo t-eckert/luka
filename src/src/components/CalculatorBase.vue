@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import ButtonOperation from "./ButtonOperation.vue";
+import ButtonOperation from "./buttons/ButtonOperation.vue";
 
 @Component({
   components: {
