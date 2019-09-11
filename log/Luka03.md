@@ -250,6 +250,6 @@ Here is the app as it now renders. I am going to merge back into master. I'm als
 
 I'm not sure what I want to do next. I'll have to sleep on it. Either I'll wire up the Wasm so I can get state from Rust or I'll work on passing the function of the buttons up the stack of Vue components.
 
-Starting Commit: []()
+Starting Commit: [7a7251ace3a5ed0b4c67f024130fdda5fb5580e7](https://github.com/t-eckert/luka/tree/7a7251ace3a5ed0b4c67f024130fdda5fb5580e7)
 
-Ending Commit: []()
+Ending Commit: [049a205f3a9e4c6cda6f9171a5b071d005b7152c](https://github.com/t-eckert/luka/tree/049a205f3a9e4c6cda6f9171a5b071d005b7152c)
