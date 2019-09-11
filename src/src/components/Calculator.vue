@@ -1,6 +1,6 @@
 <template>
   <div class="calculator">
-    <BaseState />
+    <BaseState :state="state" />
     <BaseOperations />
     <BaseNumbers />
     <BaseActions />
@@ -22,7 +22,9 @@ import BaseState from "./bases/BaseState.vue";
     BaseState
   }
 })
-export default class Calculator extends Vue {}
+export default class Calculator extends Vue {
+  state: number[] = [10000100200, 2, 0.0030043, 4.0];
+}
 </script>
 
 <style scoped lang="scss">

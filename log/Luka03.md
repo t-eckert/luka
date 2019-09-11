@@ -238,6 +238,18 @@ While the state doesn't have to be handled this way. I think it's just going to 
 
 I talked to a mentee recently about how growing as a software engineer is more about growth in wisdom rather than knowledge (though of course they are intertwined). Much of the hard knowledge of programming can easily be Googled. Modern compilers will guide you in the right direction too. Knowing what patterns to use and which to avoid is part of growing as an engineer.  
 
-With that said, let's pass some fake state to the `BaseState` component.
+With that said, let's pass some fake state to the `BaseState` component. Setting an array of numbers called `state` in `Calculator` will cause `BaseState` to update with the last 4 values in that array. As things progress and I give more control to the user, I will need to be thoughtful about this mutable state. If someone were to continually push values onto the stack, they could eventually fill up the memory of the service worker rendering that tab in the browser.  
 
+At least with Wasm and Vue, I don't have to worry about an insecure backend. If I were running the Rust portion of this code, holding the state, as a web server, there could be potential for compromise by pushing unhandled values into the backend. If I didn't plan for that possibility, I could be in trouble -- more susceptible to DDOS attacks (You will always be susceptible to DDOS attacks. It's just a matter of making the attack hard enough to pull off.).
 
+Here is the app as it now renders. I am going to merge back into master. I'm also going to delete the `add-function-buttons` branch that I've been working on. I no longer feel that is a good description of what I'm doing and I need a new name for this "feature".
+
+![Luka as it renders on the evening of 10 September 2019. 10 numbers, a push button, and four operation buttons are arranged haphazardly under a vertical stack of numbers](./images/EndOfLuka03.png)
+
+## Wrap Up
+
+I'm not sure what I want to do next. I'll have to sleep on it. Either I'll wire up the Wasm so I can get state from Rust or I'll work on passing the function of the buttons up the stack of Vue components.
+
+Starting Commit: []()
+
+Ending Commit: []()
