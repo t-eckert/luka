@@ -1,4 +1,4 @@
-# Luka 03
+# Luka 03 - See. Assess.
 
 Date: 10 September 2019
 
@@ -17,9 +17,7 @@ buttons
 |- ButtonPush.vue
 ```
 
-There are likely to be more of them and I want anyone coming to this project to be able to find any part of the code they need to change. The button components are all similar, that will change as I give them behavior.
-
-Next, I want to arrange them using CSS Grid within the `CalculatorBase` component. I made some changes to the layout and added colors that I have stolen from [TailwindCSS](https://tailwindcss.com/):
+There are likely to be more of them and I want anyone coming to this project to be able to find any part of the code they need to change. The button components are all similar, that will change as I give them behavior. I made some changes to the layout and added colors that I have stolen from [TailwindCSS](https://tailwindcss.com/):
 
 ![Six buttons separated into two even columns showing both the default and hovered state of the operation, number, and push buttons.](./images/Buttons.png)
 
@@ -108,11 +106,11 @@ There is definitely a slicker way to iterate through the numbers to draw them al
 
 ## A Colorful CSS Mistake
 
-Here is something worth investigating. I added `ButtonOperation` components to the `BaseOperations` component and that component to the `Calculator`. It drew the buttons in the app, but they still have the base button color! As of writing this I don't yet know why!
-
-This kind of investigating comes up in writing software all the time. Let's dig in.  
+Here is something worth investigating. I added `ButtonOperation` components to the `BaseOperations` component and that component to the `Calculator`. It drew the buttons in the app, but they still have the base button color!
 
 ![The operation buttons, which are supposed to be teal are appearing as the default blue-grey.](./images/ProblemButtonsAreWrongColor.png)
+
+This kind of investigating comes up in writing software all the time. Let's dig in.  
 
 The problem could come about because I am defining the new colors in a `root:` on the component. One good way of finding the source of problems is shortening the path between two points in the system. Here, instead of defining the color as a variable, then setting it from that variable, I'll just directly set it.
 
@@ -221,9 +219,9 @@ And that works! (I almost took another screenshot to show below, but it just loo
 
 ## One Last Button and Some Fake State to go with it
 
-Adding the `BaseActions` and `ButtonPush` components is much the same process. The buttons are not on the grid yet, I will fix that in a bit.
+Adding the `BaseActions` and `ButtonPush` components is much the same process. The buttons are not on the grid yet, I will fix that later.
 
-The `BaseState` component is different from the other `Base*` components, because I am going to pass props to it. This might be a good time to talk about how I plan to structure the state handling in the `Calculator` component and how I'm thinking about component interaction as a whole.
+The `BaseState` component is different from the other `Base*` components, because I am going to pass data to it. This might be a good time to talk about how I plan to structure the state handling in the `Calculator` component and how I'm thinking about component interaction as a whole.
 
 Each `Button*` component will affect the state in some way. Rather than that component changing state directly or communicating to Wasm to do calculations, I'm going to route all state-changing operations through the `Calculator` component. Here is an example of how I want this to work:
 
@@ -240,7 +238,7 @@ I talked to a mentee recently about how growing as a software engineer is more a
 
 With that said, let's pass some fake state to the `BaseState` component. Setting an array of numbers called `state` in `Calculator` will cause `BaseState` to update with the last 4 values in that array. As things progress and I give more control to the user, I will need to be thoughtful about this mutable state. If someone were to continually push values onto the stack, they could eventually fill up the memory of the service worker rendering that tab in the browser.  
 
-At least with Wasm and Vue, I don't have to worry about an insecure backend. If I were running the Rust portion of this code, holding the state, as a web server, there could be potential for compromise by pushing unhandled values into the backend. If I didn't plan for that possibility, I could be in trouble -- more susceptible to DDOS attacks (You will always be susceptible to DDOS attacks. It's just a matter of making the attack hard enough to pull off.).
+At least with Wasm and Vue, I don't have to worry about an insecure backend. If I were running the Rust portion of this code, holding the state, as a web server there could be potential for compromise by pushing unhandled values into the backend. If I didn't plan for that possibility, I could be in trouble -- more susceptible to DDOS attacks (You will always be susceptible to DDOS attacks. It's just a matter of making the attack hard enough to pull off.).
 
 Here is the app as it now renders. I am going to merge back into master. I'm also going to delete the `add-function-buttons` branch that I've been working on. I no longer feel that is a good description of what I'm doing and I need a new name for this "feature".
 
