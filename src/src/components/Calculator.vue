@@ -1,6 +1,9 @@
 <template>
   <div class="calculator">
+    <BaseState />
+    <BaseOperations />
     <BaseNumbers />
+    <BaseActions />
   </div>
 </template>
 

@@ -10,20 +10,15 @@ export default class ButtonPush extends Vue {}
 </script>
 
 <style scoped>
-:root {
-  --button-default: #4c51bf;
-  --button-hover: #434190;
-}
-
 button {
-  background-color: var(--button-default);
+  background-color: var(--button-push);
 }
 
 button:hover {
-  background-color: var(--button-hover);
+  background-color: var(--button-push-hover);
 }
 
 button:active {
-  background-color: var(--button-default);
+  background-color: var(--button-push);
 }
 </style>

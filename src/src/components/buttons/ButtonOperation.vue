@@ -12,20 +12,15 @@ export default class ButtonOperation extends Vue {
 </script>
 
 <style scoped>
-:root {
-  --button-default: #38b2ac;
-  --button-hover: #319795;
-}
-
 button {
-  background-color: var(--button-default);
+  background-color: var(--button-operation);
 }
 
 button:hover {
-  background-color: var(--button-hover);
+  background-color: var(--button-operation-hover);
 }
 
 button:active {
-  background-color: var(--button-default);
+  background-color: var(--button-operation);
 }
 </style>

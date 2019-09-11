@@ -1,6 +1,10 @@
 :root {
     --button-default: #4A5568;
-    --button-hover: #2D3748;
+    --button-default-hover: #2D3748;
+    --button-operation: #38b2ac;
+    --button-operation-hover: #319795;
+    --button-push: #4c51bf;
+    --button-push-hover: #434190;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
 }
 
@@ -26,7 +30,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--button-hover);
+    background-color: var(--button-default-hover);
 }
 
 button:active {
