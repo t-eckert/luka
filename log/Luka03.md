@@ -80,3 +80,28 @@ The component separations can be seen here:
 ![The calculator is seen with explicit divisions of components highlighted](./images/ComponentDivisions.png)
 
 The next step is to build these `Base` components and populate them with buttons.
+
+Now the component structure is
+
+``` text
+|-App.vue                   implements Calculator
+|-components/
+| |-Calculator.vue          implements BaseActions, BaseNumbers, BaseOperations, BaseState
+| |-bases/
+| | |-BaseActions.vue       implements ButtonPush
+| | |-BaseNumbers.vue       implements ButtonNumber
+| | |-BaseOperations.vue    implements ButtonOperation
+| | |-BaseState.vue
+| |-buttons/
+| | |-ButtonNumber.vue
+| | |-ButtonOperation.vue
+| | |-ButtonPush.vue
+```
+
+I'm going to start with the `BaseNumbers` which is going to have a 3x4 grid.  
+
+Ok, not a bad start:
+
+![In a Chrome browser, a grid of numbers 0 through 9 is shown](./images/ButtonsOnApp.png)
+
+There is definitely a slicker way to iterate through the numbers to draw them all to the screen, but what I have works for now.

@@ -1,16 +1,26 @@
 <template>
-  <div class="calculator"></div>
+  <div class="calculator">
+    <BaseNumbers />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import BaseActions from "./bases/BaseActions.vue";
+import BaseNumbers from "./bases/BaseNumbers.vue";
+import BaseOperations from "./bases/BaseOperations.vue";
+import BaseState from "./bases/BaseState.vue";
 
 @Component({
-  components: {}
+  components: {
+    BaseActions,
+    BaseNumbers,
+    BaseOperations,
+    BaseState
+  }
 })
 export default class Calculator extends Vue {}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 </style>
