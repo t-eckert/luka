@@ -2,7 +2,7 @@
 
 ![Cover Image: Text reads Luka 00 - Intent and Deployment. Background shows two failed builds leading up to a third successful build.](./images/00CoverImage.png)
 
-> This post is part of a series on the development of a reverse polish notation calculator web-app using Rust/Wasm, Vue, and TypeScript.
+> Read this post on [dev.to](https://dev.to/teckert/luka-00-intent-and-deployment-29f0)
 
 Date: 7 September 2019
 

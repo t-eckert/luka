@@ -2,6 +2,8 @@
 
 ![Cover Image: Text reads Luka 03 - See. Assess. Background shows a haphazardly arranged buttons on the calculator](./image/03CoverImage.png)
 
+> Read this post on [dev.to](https://dev.to/teckert/luka-03-see-assess-4p7d)
+
 Date: 10 September 2019
 
 ## Button++

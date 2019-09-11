@@ -2,6 +2,8 @@
 
 ![Cover Image: Text reads Luka 02 - Et Teal. Background shows a calculator displaying 3.14.](./images/02CoverImage.png)
 
+> Read this post on [dev.to](https://dev.to/teckert/luka-02-et-teal-4lm3)
+
 Date: 9 September 2019
 
 Let's add some buttons. For this iteration, I want to have a UI that can display the `state` I created in Luka 01, 10 number buttons, and a button for each arithmetic function.  

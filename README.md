@@ -13,6 +13,7 @@ I am posting my daily logs of the project on [dev.to](https://dev.to/). You can 
 - [Luka 00: Intent and Deployment](https://dev.to/teckert/luka-00-intent-and-deployment-29f0)
 - [Luka 01: Mathing Around in Rust](https://dev.to/teckert/luka-01-mathing-around-in-rust-4pjb)
 - [Luka 02: Et Teal](https://dev.to/teckert/luka-02-et-teal-4lm3)
+- [Luka 03: See. Assess.](https://dev.to/teckert/luka-03-see-assess-4p7d)
 
 ## Design
 

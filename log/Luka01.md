@@ -2,7 +2,7 @@
 
 ![Cover Image: Text reads Luka 01 - Mathing Around in Rust. Background shows a Rust function called operate that performs the four arithmetic operations: add, subtract, multiply, and divide.](./images/01CoverImage.png)
 
-> This post is part of a series on the development of a reverse polish notation calculator web-app using Rust/Wasm, Vue, and TypeScript.
+> Read this post on [dev.to](https://dev.to/teckert/luka-01-mathing-around-in-rust-4pjb)
 
 Date: 8 September 2019
 
