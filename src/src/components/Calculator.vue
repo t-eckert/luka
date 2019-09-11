@@ -1,19 +1,14 @@
 <template>
-  <div class="calculator-base">
-    <ButtonOperation operation="+" />
-  </div>
+  <div class="calculator"></div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import ButtonOperation from "./buttons/ButtonOperation.vue";
 
 @Component({
-  components: {
-    ButtonOperation
-  }
+  components: {}
 })
-export default class CalculatorBase extends Vue {}
+export default class Calculator extends Vue {}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

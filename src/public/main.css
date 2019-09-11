@@ -1,6 +1,6 @@
 :root {
-    --teal-dark: #319795;
-    --teal-light: #38b2ac;
+    --button-default: #4A5568;
+    --button-hover: #2D3748;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
 }
 
@@ -18,7 +18,7 @@ button {
     justify-content: center;
     cursor: pointer;
     color: #fff;
-    background-color: var(--teal-light);
+    background-color: var(--button-default);
     padding: 0.5rem 1rem;
     margin: 1rem;
     box-shadow: var(--shadow);
@@ -26,27 +26,9 @@ button {
 }
 
 button:hover {
-    background-color: var(--teal-dark);
+    background-color: var(--button-hover);
 }
 
 button:active {
-    background-color: var(--teal-light);
+    background-color: var(--button-default);
 }
-
-/* button {
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
-    flex-shrink: 0;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 0.125rem;
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    position: relative;
-    outline: none;
-    overflow: visible;
-    background: var(--neutral-alpha-6);
-    transition: background 80ms linear;
-} */

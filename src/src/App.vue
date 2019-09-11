@@ -6,11 +6,11 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import CalculatorBase from "./components/CalculatorBase.vue";
+import Calculator from "./components/Calculator.vue";
 
 @Component({
   components: {
-    CalculatorBase
+    Calculator
   }
 })
 export default class App extends Vue {}
