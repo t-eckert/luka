@@ -4,7 +4,15 @@
 
 ## Backstory
 
-I have been fascinated by reverse polish notation (RPN) calculators since college. Last year, I created an [RPN calculator web-app](http://rpn.herokuapp.com/) in React while I was learning the framework. It's not great. This is a new project with the same goals from scratch to push my learning of Rust, WASM, and Vue. I don't know if it will be successful, but my goal is to be radically transparent. I am going to log the whole project to share my progress.  
+I have been fascinated by reverse polish notation (RPN) calculators since college. Last year, I created an [RPN calculator web-app](http://rpn.herokuapp.com/) in React while I was learning the framework. It's not great. This is a new project with the same goals from scratch to push my learning of Rust, WASM, and Vue. I don't know if it will be successful, but my goal is to be radically transparent. I am going to log the whole project to share my progress.
+
+## Blog Series
+
+I am posting my daily logs of the project on [dev.to](https://dev.to/). You can follow along with the project there:  
+
+- [Luka 00: Intent and Deployment](https://dev.to/teckert/luka-00-intent-and-deployment-29f0)
+- [Luka 01: Mathing Around in Rust](https://dev.to/teckert/luka-01-mathing-around-in-rust-4pjb)
+- [Luka 02: Et Teal](https://dev.to/teckert/luka-02-et-teal-4lm3)
 
 ## Design
 

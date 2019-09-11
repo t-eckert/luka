@@ -14,14 +14,16 @@ impl State {
         }
     }
 
-    /// Pushes `value` to `State.stack` then creates a new instance of `State` using the appended to `stack`
+    /// Pushes `value` to `State.stack` then creates a new instance of `State`
+    /// using the appended to `stack`
     pub fn push(mut self, value: f64) -> State {
         self.stack.push(value);
         State { stack: self.stack }
     }
 
     /// Perform the operation passed as string on the last two values in the `stack`.  
-    /// Expects a string matching one of the following: `+`, `-`, `*`, `/`. If a string is passed that doesn't match, the function will return the `State` unchanged.
+    /// Expects a string matching one of the following: `+`, `-`, `*`, `/`.
+    /// If a string is passed that doesn't match, the function will return the `State` unchanged.
     ///
     /// ``` rust
     /// use calculator::State;
