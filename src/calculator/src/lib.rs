@@ -1,11 +1,15 @@
+use wasm_bindgen::prelude::*;
+
 /// # State
 ///
 /// Contains every value on the reverse polish notation calculator stack.
+#[wasm_bindgen]
 pub struct State {
     /// State handling for the "stack" uses a Vec that is treated as a stack.
-    pub stack: Vec<f64>,
+    pub stack: Vec<f32>,
 }
 
+#[wasm_bindgen]
 impl State {
     /// Creates a new instance of `State` with a stack of 4 zeros.
     pub fn new() -> State {
@@ -16,7 +20,7 @@ impl State {
 
     /// Pushes `value` to `State.stack` then creates a new instance of `State`
     /// using the appended to `stack`
-    pub fn push(mut self, value: f64) -> State {
+    pub fn push(mut self, value: f32) -> State {
         self.stack.push(value);
         State { stack: self.stack }
     }
@@ -39,7 +43,7 @@ impl State {
         let z = self.stack.pop().unwrap();
         let y = self.stack.pop().unwrap();
 
-        // Return a `Vec<f64>` with the matching operation performed.
+        // Return a `Vec<f32>` with the matching operation performed.
         let mut stack_tail = match operation {
             "+" => vec![y + z],
             "-" => vec![y - z],
